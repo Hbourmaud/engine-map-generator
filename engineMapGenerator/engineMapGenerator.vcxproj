@@ -104,13 +104,13 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>D:\prog_motor_m1\engine-map-generator\engineMapGenerator\include;D:\GLFW\glfw-3.4.bin.WIN64\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)\include\;</AdditionalIncludeDirectories>
       <LanguageStandard>stdcpp20</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>D:\GLFW\glfw-3.4.bin.WIN64\lib-vc2022</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(ProjectDir)\src\GLFW\lib-vc2022\;</AdditionalLibraryDirectories>
       <AdditionalDependencies>glfw3.lib;opengl32.lib;user32.lib;gdi32.lib;shell32.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
@@ -139,7 +139,18 @@
     <ClCompile Include="src\Utils\ThreadPool.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="include\GLFW\glfw3.h" />
+    <ClInclude Include="include\GLFW\glfw3native.h" />
     <ClInclude Include="include\Utils\ThreadPool.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="src\GLFW\lib-mingw-w64\glfw3.dll" />
+    <Content Include="src\GLFW\lib-mingw-w64\libglfw3.a" />
+    <Content Include="src\GLFW\lib-mingw-w64\libglfw3dll.a" />
+    <Content Include="src\GLFW\lib-vc2022\glfw3.dll" />
+    <Content Include="src\GLFW\lib-vc2022\glfw3.lib" />
+    <Content Include="src\GLFW\lib-vc2022\glfw3dll.lib" />
+    <Content Include="src\GLFW\lib-vc2022\glfw3_mt.lib" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
