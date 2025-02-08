@@ -136,11 +136,17 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="src\HAL\HALFactory.cpp" />
+    <ClCompile Include="src\HAL\HALWindowGLFW.cpp" />
     <ClCompile Include="src\Utils\ThreadPool.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\GLFW\glfw3.h" />
     <ClInclude Include="include\GLFW\glfw3native.h" />
+    <ClInclude Include="include\HAL\HAL.h" />
+    <ClInclude Include="include\HAL\HALFactory.h" />
+    <ClInclude Include="include\HAL\HALWindow.h" />
+    <ClInclude Include="include\HAL\HALWindowGLFW.h" />
     <ClInclude Include="include\Utils\ThreadPool.h" />
   </ItemGroup>
   <ItemGroup>
